@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int papan[3][3] = {
+        {88, 79, 88},
+        {79, 88, 79},
+        {79, 88, 79}
+    };
+
+    printf("+---+---+---+\n");
+    for (int i = 0; i < 3; i++) {
+        printf("%c", 124);
+        for (int j = 0; j < 3; j++) {
+            printf(" %c %c", papan[i][j], 124);
+        }
+        printf("\n+---+---+---+\n");
+    }
+
+    return 0;
+}
