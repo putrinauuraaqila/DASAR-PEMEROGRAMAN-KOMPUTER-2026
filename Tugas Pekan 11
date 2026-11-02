@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>\
+
+#define N 4
+
+int main(void) {
+    int A[N][N];   /* matriks a_ij */
+    int x[N];      /* vektor x_j   */
+    int b[N];      /* hasil b = A * x */
+
+    srand((unsigned int)time(NULL));
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            A[i][j] = rand() % 10;
+        }
+        x[i] = rand() % 10;
+    }
+
+    for (int i = 0; i < N; i++) {
+        b[i] = 0;
+        for (int j = 0; j < N; j++) {
+            b[i] += A[i][j] * x[j];
+        }
+    }
+
+    printf("Matriks A (4x4):\n");
+    for (int i = 0; i < N; i++) {
+        printf("| ");
+        for (int j = 0; j < N; j++) {
+            printf("%3d ", A[i][j]);
+        }
+        printf("|\n");
+    }
+
+    printf("\nVektor x (4x1):\n");
+    for (int i = 0; i < N; i++) {
+        printf("| %3d |\n", x[i]);
+    }
+
+    printf("\nHasil b = A * x:\n");
+    for (int i = 0; i < N; i++) {
+        printf("| %4d |\n", b[i]);
+    }
+
+    return 0;
+}
