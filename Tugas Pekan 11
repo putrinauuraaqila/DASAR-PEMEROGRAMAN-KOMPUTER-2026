@@ -5,9 +5,9 @@
 #define N 4
 
 int main(void) {
-    int A[N][N];   /* matriks a_ij */
-    int x[N];      /* vektor x_j   */
-    int b[N];      /* hasil b = A * x */
+    int A[N][N];   
+    int x[N];      
+    int b[N];      
 
     srand((unsigned int)time(NULL));
 
